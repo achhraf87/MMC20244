@@ -1,0 +1,50 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold"><img class="d-inline-block align-top" src="assets/micro.png" width="200"> 
+                        </h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="loginForm.controls['Email'].dirty && loginForm.hasError('required','Email')">
+                                    <span class="fa fa-envelope p-2"></span>
+                                    <input formControlName="Email" type="text" placeholder="E-mail"> 
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.controls['Email'].dirty && loginForm.hasError('required','Email')" class="text-danger">*E-mail obligatoire</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="Password" [type]="type" placeholder="Mot de passe"> 
+                                    <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')" class="text-danger">*Mot de passe obligatoire</small>
+                            <div class="form-inline fr mt-4">
+                                <a id="forget" class="font-weight-bold">Mot de passe oublié ? </a>
+                            </div>
+                            <button (click)="Connexion()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Connexion</button>
+                            <div class="text-center pt-4 text-muted">Tu n'ai pas de compte ? <a id="forget" routerLink="/signup"> Crée un compte</a> </div>
+                        </form>
+                    </div>
+                    <div class="mx-3 my-2 py-2 bordert">
+
+                        <div class="text-center py-3">
+                         <a href="https://wwww.facebook.com" target="_blank" class="px-2"> <img src="data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGRhdGEtbmFtZT0iRWJlbmUgMSIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHBhdGggZmlsbD0iIzE4NzdmMiIgZD0iTTEwMjQsNTEyQzEwMjQsMjI5LjIzMDE2LDc5NC43Njk3OCwwLDUxMiwwUzAsMjI5LjIzMDE2LDAsNTEyYzAsMjU1LjU1NCwxODcuMjMxLDQ2Ny4zNzAxMiw0MzIsNTA1Ljc3Nzc3VjY2MEgzMDJWNTEySDQzMlYzOTkuMkM0MzIsMjcwLjg3OTgyLDUwOC40Mzg1NCwyMDAsNjI1LjM4OTIyLDIwMCw2ODEuNDA3NjUsMjAwLDc0MCwyMTAsNzQwLDIxMFYzMzZINjc1LjQzNzEzQzYxMS44MzUwOCwzMzYsNTkyLDM3NS40NjY2Nyw1OTIsNDE1Ljk1NzI4VjUxMkg3MzRMNzExLjMsNjYwSDU5MnYzNTcuNzc3NzdDODM2Ljc2OSw5NzkuMzcwMTIsMTAyNCw3NjcuNTU0LDEwMjQsNTEyWiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03MTEuMyw2NjAsNzM0LDUxMkg1OTJWNDE1Ljk1NzI4QzU5MiwzNzUuNDY2NjcsNjExLjgzNTA4LDMzNiw2NzUuNDM3MTMsMzM2SDc0MFYyMTBzLTU4LjU5MjM1LTEwLTExNC42MTA3OC0xMEM1MDguNDM4NTQsMjAwLDQzMiwyNzAuODc5ODIsNDMyLDM5OS4yVjUxMkgzMDJWNjYwSDQzMnYzNTcuNzc3NzdhNTE3LjM5NjE5LDUxNy4zOTYxOSwwLDAsMCwxNjAsMFY2NjBaIi8+PC9zdmc+"> </a>
+                         
+                         <a href="https://wwww.facebook.com" target="_blank" class="px-2"> <img src="data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmJiYjAwIiBkPSJNMTEzLjQ3IDMwOS40MDggOTUuNjQ4IDM3NS45NGwtNjUuMTM5IDEuMzc4QzExLjA0MiAzNDEuMjExIDAgMjk5LjkgMCAyNTZjMC00Mi40NTEgMTAuMzI0LTgyLjQ4MyAyOC42MjQtMTE3LjczMmguMDE0TDg2LjYzIDE0OC45bDI1LjQwNCA1Ny42NDRjLTUuMzE3IDE1LjUwMS04LjIxNSAzMi4xNDEtOC4yMTUgNDkuNDU2LjAwMiAxOC43OTIgMy40MDYgMzYuNzk3IDkuNjUxIDUzLjQwOHoiLz48cGF0aCBmaWxsPSIjNTE4ZWY4IiBkPSJNNTA3LjUyNyAyMDguMTc2QzUxMC40NjcgMjIzLjY2MiA1MTIgMjM5LjY1NSA1MTIgMjU2YzAgMTguMzI4LTEuOTI3IDM2LjIwNi01LjU5OCA1My40NTEtMTIuNDYyIDU4LjY4My00NS4wMjUgMTA5LjkyNS05MC4xMzQgMTQ2LjE4N2wtLjAxNC0uMDE0LTczLjA0NC0zLjcyNy0xMC4zMzgtNjQuNTM1YzI5LjkzMi0xNy41NTQgNTMuMzI0LTQ1LjAyNSA2NS42NDYtNzcuOTExaC0xMzYuODlWMjA4LjE3NmgyNDUuODk5eiIvPjxwYXRoIGZpbGw9IiMyOGI0NDYiIGQ9Im00MTYuMjUzIDQ1NS42MjQuMDE0LjAxNEMzNzIuMzk2IDQ5MC45MDEgMzE2LjY2NiA1MTIgMjU2IDUxMmMtOTcuNDkxIDAtMTgyLjI1Mi01NC40OTEtMjI1LjQ5MS0xMzQuNjgxbDgyLjk2MS02Ny45MWMyMS42MTkgNTcuNjk4IDc3LjI3OCA5OC43NzEgMTQyLjUzIDk4Ljc3MSAyOC4wNDcgMCA1NC4zMjMtNy41ODIgNzYuODctMjAuODE4bDgzLjM4MyA2OC4yNjJ6Ii8+PHBhdGggZmlsbD0iI2YxNDMzNiIgZD0ibTQxOS40MDQgNTguOTM2LTgyLjkzMyA2Ny44OTZDMzEzLjEzNiAxMTIuMjQ2IDI4NS41NTIgMTAzLjgyIDI1NiAxMDMuODJjLTY2LjcyOSAwLTEyMy40MjkgNDIuOTU3LTE0My45NjUgMTAyLjcyNGwtODMuMzk3LTY4LjI3NmgtLjAxNEM3MS4yMyA1Ni4xMjMgMTU3LjA2IDAgMjU2IDBjNjIuMTE1IDAgMTE5LjA2OCAyMi4xMjYgMTYzLjQwNCA1OC45MzZ6Ii8+PC9zdmc+"> </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

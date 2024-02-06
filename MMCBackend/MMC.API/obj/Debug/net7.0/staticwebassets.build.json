@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "60uZr2fJMNKRpBabHD5cmZsrJSPpNrJaQOBbZZox3ZY=",
+  "Source": "MMC.API",
+  "BasePath": "_content/MMC.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,116 @@
+<!-- <div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">S'inscrire</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="signUpForm">
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['Fullname'].dirty && signUpForm.hasError('required','Fullname')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="Fullname" type="text" placeholder="Nom et Prénom"> 
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['Fullname'].dirty && signUpForm.hasError('required','Fullname')" class="text-danger"></small>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['Email'].dirty && signUpForm.hasError('required','Email')">
+                                    <span class="fa fa-envelope p-2"></span>
+                                    <input formControlName="Email" type="text" placeholder="E-mail" > 
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['Email'].dirty && signUpForm.hasError('required','Email')" class="text-danger"></small>
+                        
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['Password'].dirty && signUpForm.hasError('required','Password')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="Password" [type]="type" placeholder="Mot de passe" autocomplete="current-password"> 
+                                    <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                            </div>
+                            
+                            <small *ngIf="signUpForm.controls['Password'].dirty && signUpForm.hasError('required','Password')" class="text-danger"></small>
+                            
+                           
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['ImageUrl'].dirty && signUpForm.hasError('required','ImageUrl')">
+                                    <span class="fa fa-linkedin p-2"></span>
+                                    <input formControlName="ImageUrl" type="text" placeholder="linkedin"> 
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['ImageUrl'].dirty && signUpForm.hasError('required','ImageUrl')" class="text-danger"></small>
+                            <br>
+                            
+                            <button (click)="onSignUp()" type="submit" class="btn btn-primary btn-block mt-4 w-100">S'inscrire
+                            </button>
+                            <div class="text-center pt-4 text-muted">Avoir déjà un compte ? <a id="forget" routerLink="/login"> Se connecter </a> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+
+ <div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">S'inscrire</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="signUpForm">
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['Fullname'].dirty && signUpForm.hasError('required','Fullname')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="Fullname" type="text" placeholder="Fullname"> 
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['Fullname'].dirty && signUpForm.hasError('required','Fullname')" class="text-danger">*Nom obligatoire</small>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['Email'].dirty && signUpForm.hasError('required','Email')">
+                                    <span class="fa fa-envelope p-2"></span>
+                                    <input formControlName="Email" type="text" placeholder="Email"> 
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['Email'].dirty && signUpForm.hasError('required','Email')" class="text-danger">*Email obligatoire</small>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['ImageUrl'].dirty && signUpForm.hasError('required','ImageUrl')">
+                                    <span class="fa fa-linkedin p-2"></span>
+                                    <input formControlName="ImageUrl" type="text" placeholder="linkedin"> 
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['ImageUrl'].dirty && signUpForm.hasError('required','ImageUrl')" class="text-danger">*linkedin obligatoire</small>
+                        
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="signUpForm.controls['Password'].dirty && signUpForm.hasError('required','Password')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="Password" [type]="type" placeholder="Mot de passe"> 
+                                    <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['Password'].dirty && signUpForm.hasError('required','Password')" class="text-danger">*Mot de passe obligatoire</small>
+
+
+                            <button (click)="onSignUp()" type="submit" class="btn btn-primary btn-block mt-4 w-100">S'inscrire
+                            </button>
+                            <div class="text-center pt-4 text-muted">Avoir déjà un compte ? <a id="forget" routerLink="/login"> Se connecter </a> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
