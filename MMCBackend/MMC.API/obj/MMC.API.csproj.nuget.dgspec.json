@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\ApprouverUneDemande\\AdminMMC\\MMC\\MMC.API\\MMC.API.csproj": {}
+    "C:\\Users\\hp\\Desktop\\MMC2024\\MMCBackend\\MMC.API\\MMC.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\ApprouverUneDemande\\AdminMMC\\MMC\\MMC.API\\MMC.API.csproj": {
+    "C:\\Users\\hp\\Desktop\\MMC2024\\MMCBackend\\MMC.API\\MMC.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\ApprouverUneDemande\\AdminMMC\\MMC\\MMC.API\\MMC.API.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MMC2024\\MMCBackend\\MMC.API\\MMC.API.csproj",
         "projectName": "MMC.API",
-        "projectPath": "C:\\Users\\hp\\Desktop\\ApprouverUneDemande\\AdminMMC\\MMC\\MMC.API\\MMC.API.csproj",
+        "projectPath": "C:\\Users\\hp\\Desktop\\MMC2024\\MMCBackend\\MMC.API\\MMC.API.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\ApprouverUneDemande\\AdminMMC\\MMC\\MMC.API\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\MMC2024\\MMCBackend\\MMC.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

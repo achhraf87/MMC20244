@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F5e9kNE2Zn1x4Hxog8+lYpcPAUUtVcmIMEeCt8FepGABJs5XkPSdsH0mOfdCt5iiNFxwfXPWeUv9Pb/IAfTpCQ==",
+  "dgSpecHash": "pfuWei9lBaVBaVjmtUNP+dbiC6nLGaiVEDbrvulr8FuHg4ht5CZAUblFl/X8Ur5BwwfuN9DnAdHoQLXLCEu5vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\ApprouverUneDemande\\AdminMMC\\MMC\\MMC.API\\MMC.API.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Desktop\\MMC2024\\MMCBackend\\MMC.API\\MMC.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

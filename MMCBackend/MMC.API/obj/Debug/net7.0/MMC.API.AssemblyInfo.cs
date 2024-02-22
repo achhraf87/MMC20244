@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MMC.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a233b48b4e6dcf3fc787da7b9f37494e6d0ee7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ce5e5aa9615377cd4284dd37bb946b408abae0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MMC.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MMC.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

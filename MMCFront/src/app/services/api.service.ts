@@ -28,6 +28,7 @@ export class ApiService {
   private ProgrammeAssoci: string = this.APlIurl+'Etudiant';
 
   private APIurl: string = 'https://localhost:44323/api/';
+  
 
 
 

@@ -184,6 +184,26 @@ namespace MMC.API.Controllers
         }
 
 
+        [HttpGet("getToutesLesDemandesS")]
+        public async Task<ActionResult<PagedResponseDTO<UtilisateurDTO>>> GetDemandes([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        {
+            var totalDemandes = await _Context.Utilisateurs
+                .Where(d => d.Statut == "En attente")
+                .CountAsync();
+
+            var demandes = await _Context.Utilisateurs
+                .Where(d => d.Statut == "En attente")
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var totalPages = (int)Math.Ceiling(totalDemandes / (double)pageSize);
+
+            var response = new PagedResponseDTO<UtilisateurDTO>(demandes, page, pageSize, totalDemandes, totalPages);
+
+            return Ok(response);
+        }
+
 
 
 
